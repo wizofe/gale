@@ -6,6 +6,7 @@ NEUROGALE: GPU-Accelerated Large-scale Exploration
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Documentation](https://img.shields.io/badge/docs-readthedocs-blue.svg)](https://neurogale.readthedocs.io)
+[![DOI](https://zenodo.org/badge/1007727940.svg)](https://doi.org/10.5281/zenodo.17419835)
 
 **neurogale** (**G**PU-**A**ccelerated **L**arge-scale **E**xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing. Designed for neuroscience researchers working with fMRI data, neurogale provides efficient tools for calculating graph theory metrics such as degree centrality across whole-brain voxel networks.
 
