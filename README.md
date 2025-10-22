@@ -1,4 +1,6 @@
-# gale: GPU-Accelerated Large-scale Exploration
+# GALE
+
+GALE: GPU-Accelerated Large-scale Exploration
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -243,7 +245,7 @@ If you use **gale** in your research, please cite:
 ```bibtex
 @software{gale2025,
   author = {Valasakis, Ioannis},
-  title = {gale: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
+  title = {GALE: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
   year = {2025},
   url = {https://github.com/wizofe/gale},
   version = {0.2.0},
