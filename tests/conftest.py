@@ -1,5 +1,5 @@
 """
-Pytest configuration and shared fixtures for gale framework tests.
+Pytest configuration and shared fixtures for neurogale framework tests.
 
 This module provides test fixtures, configuration, and utilities used
 across the test suite.

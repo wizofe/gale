@@ -1,5 +1,5 @@
 """
-gale Framework Experimental Runner.
+neurogale Framework Experimental Runner.
 
 This module provides the main entry point for running brain connectivity
 analysis experiments with CPU/GPU comparison and benchmarking.

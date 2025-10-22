@@ -1,7 +1,7 @@
 API Reference
 =============
 
-This page contains the API reference for **gale** modules.
+This page contains the API reference for **neurogale** modules.
 
 Preprocessing Module
 --------------------

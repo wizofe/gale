@@ -1,14 +1,14 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='gale',  # GPU-Accelerated Large-scale Exploration
+    name='neurogale',  # GPU-Accelerated Large-scale Exploration
     version='0.2.0',  # Bumped version for major improvements
     author='Ioannis Valasakis',
     author_email='code@wizofe.uk',
-    description='gale: GPU-Accelerated Large-scale Exploration for brain connectivity analysis',
+    description='neurogale: GPU-Accelerated Large-scale Exploration for brain connectivity analysis',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='https://github.com/wizofe/gale',
+    url='https://github.com/wizofe/neurogale',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     install_requires=[
@@ -39,7 +39,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            'gale=experiments.run_experiments:main',  # Fixed module path
+            'neurogale=experiments.run_experiments:main',  # Fixed module path
         ]
     },
     python_requires='>=3.8',

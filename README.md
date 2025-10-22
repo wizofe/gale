@@ -1,15 +1,15 @@
-# GALE
+# NEUROGALE
 
-GALE: GPU-Accelerated Large-scale Exploration
+NEUROGALE: GPU-Accelerated Large-scale Exploration
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Documentation](https://img.shields.io/badge/docs-readthedocs-blue.svg)](https://gale.readthedocs.io)
+[![Documentation](https://img.shields.io/badge/docs-readthedocs-blue.svg)](https://neurogale.readthedocs.io)
 
-**gale** (**G**PU-**A**ccelerated **L**arge-scale **E**xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing. Designed for neuroscience researchers working with fMRI data, gale provides efficient tools for calculating graph theory metrics such as degree centrality across whole-brain voxel networks.
+**neurogale** (**G**PU-**A**ccelerated **L**arge-scale **E**xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing. Designed for neuroscience researchers working with fMRI data, neurogale provides efficient tools for calculating graph theory metrics such as degree centrality across whole-brain voxel networks.
 
-> **Performance**: gale achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelised) across all tested voxel sizes.
+> **Performance**: neurogale achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelised) across all tested voxel sizes.
 
 ## Key Features
 
@@ -33,8 +33,8 @@ GALE: GPU-Accelerated Large-scale Exploration
 
 ```bash
 # Clone the repository
-git clone https://github.com/wizofe/gale.git
-cd gale
+git clone https://github.com/wizofe/neurogale.git
+cd neurogale
 
 # Create virtual environment (using uv - recommended)
 uv venv .venv
@@ -64,16 +64,16 @@ pip install -e .
 
 ```bash
 # Run analysis with synthetic data (CPU-only)
-gale --n_voxels 1000 --n_timepoints 200 --threshold 0.2 --cpu-only
+neurogale --n_voxels 1000 --n_timepoints 200 --threshold 0.2 --cpu-only
 
 # Run with GPU acceleration (if available)
-gale --n_voxels 5000 --n_timepoints 300 --threshold 0.3
+neurogale --n_voxels 5000 --n_timepoints 300 --threshold 0.3
 
 # Check GPU information
-gale --show-gpu-info
+neurogale --show-gpu-info
 
 # Run with reproducible seed
-gale --seed 42 --n_voxels 1000
+neurogale --seed 42 --n_voxels 1000
 ```
 
 ### Python API
@@ -175,7 +175,7 @@ On **MacBook Pro 2014** (CPU-only, no CUDA):
 ## Architecture
 
 ```
-gale/
+neurogale/
 ├── src/
 │   ├── data/               # Data I/O (NIfTI loading)
 │   ├── preprocessing/      # Standardisation (z-score)
@@ -190,7 +190,7 @@ gale/
 
 ## Algorithm
 
-**gale** computes voxelwise degree centrality using the following pipeline:
+**neurogale** computes voxelwise degree centrality using the following pipeline:
 
 1. **Standardisation**: Z-score normalise each voxel timeseries
    ```
@@ -214,9 +214,9 @@ gale/
 
 ## Performance
 
-**gale** achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelised) across all tested voxel sizes. Below are computational performance results on synthetic augmented datasets (timings in milliseconds):
+**neurogale** achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelised) across all tested voxel sizes. Below are computational performance results on synthetic augmented datasets (timings in milliseconds):
 
-| Voxels  | CPU (NumPy) | gale (GPU) | AFNI (64-core) | Speedup vs NumPy | Speedup vs AFNI |
+| Voxels  | CPU (NumPy) | neurogale (GPU) | AFNI (64-core) | Speedup vs NumPy | Speedup vs AFNI |
 |---------|-------------|------------|----------------|------------------|-----------------|
 | 1,000   | 24.68       | 1.90       | 33.50          | 13.0×            | 17.6×           |
 | 10,000  | 736.19      | 5.91       | 322.79         | 124.6×           | 54.6×           |
@@ -240,24 +240,24 @@ gale/
 
 ## Citation
 
-If you use **gale** in your research, please cite:
+If you use **neurogale** in your research, please cite:
 
 ```bibtex
-@software{gale2025,
+@software{neurogale2025,
   author = {Valasakis, Ioannis},
-  title = {GALE: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
+  title = {NEUROGALE: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
   year = {2025},
-  url = {https://github.com/wizofe/gale},
+  url = {https://github.com/wizofe/neurogale},
   version = {0.2.0},
-  note = {Documentation available at \url{https://gale.readthedocs.io}}
+  note = {Documentation available at \url{https://neurogale.readthedocs.io}}
 }
 ```
 
 For LaTeX documents:
 ```latex
-\textsc{gale} (GPU-Accelerated Large-scale Exploration) is available at
-\url{https://github.com/wizofe/gale}. Documentation, including installation
-instructions and usage examples, is available at \url{https://gale.readthedocs.io}.
+\textsc{neurogale} (GPU-Accelerated Large-scale Exploration) is available at
+\url{https://github.com/wizofe/neurogale}. Documentation, including installation
+instructions and usage examples, is available at \url{https://neurogale.readthedocs.io}.
 ```
 
 ## References
@@ -314,4 +314,4 @@ This project is licensed under the **GNU General Public License v3.0** - see the
 
 ---
 
-**gale** - *Fast, reliable, publication-ready brain connectivity analysis*
+**neurogale** - *Fast, reliable, publication-ready brain connectivity analysis*

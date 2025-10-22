@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.abspath('..'))
 sys.path.insert(0, os.path.abspath('../src'))
 
 # -- Project information -----------------------------------------------------
-project = 'gale'
+project = 'neurogale'
 copyright = '2025, Ioannis Valasakis'
 author = 'Ioannis Valasakis'
 release = '0.2.0'
@@ -47,7 +47,7 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 html_theme_options = {
-    'canonical_url': 'https://gale.readthedocs.io',
+    'canonical_url': 'https://neurogale.readthedocs.io',
     'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
@@ -64,7 +64,7 @@ html_theme_options = {
 html_context = {
     'display_github': True,
     'github_user': 'wizofe',
-    'github_repo': 'gale',
+    'github_repo': 'neurogale',
     'github_version': 'master',
     'conf_py_path': '/docs/',
 }
@@ -81,20 +81,20 @@ latex_elements = {
 }
 
 latex_documents = [
-    (master_doc, 'gale.tex', 'gale Documentation',
+    (master_doc, 'neurogale.tex', 'neurogale Documentation',
      'Ioannis Valasakis', 'manual'),
 ]
 
 # -- Options for manual page output ------------------------------------------
 man_pages = [
-    (master_doc, 'gale', 'gale Documentation',
+    (master_doc, 'neurogale', 'neurogale Documentation',
      [author], 1)
 ]
 
 # -- Options for Texinfo output ----------------------------------------------
 texinfo_documents = [
-    (master_doc, 'gale', 'gale Documentation',
-     author, 'gale', 'GPU-Accelerated Large-scale Exploration for brain connectivity analysis.',
+    (master_doc, 'neurogale', 'neurogale Documentation',
+     author, 'neurogale', 'GPU-Accelerated Large-scale Exploration for brain connectivity analysis.',
      'Miscellaneous'),
 ]
 

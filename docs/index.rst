@@ -1,12 +1,12 @@
-GALE: GPU-Accelerated Large-scale Exploration
-==============================================
+NEUROGALE: GPU-Accelerated Large-scale Exploration
+==================================================
 
-Welcome to the **GALE** framework documentation.
+Welcome to the **NEUROGALE** framework documentation.
 
-**GALE** (**G**\PU-**A**\ccelerated **L**\arge-scale **E**\xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing.
+**NEUROGALE** (**G**\PU-**A**\ccelerated **L**\arge-scale **E**\xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing.
 
 .. note::
-   **Performance**: GALE achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelized) across all tested voxel sizes.
+   **Performance**: NEUROGALE achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelized) across all tested voxel sizes.
 
 Features
 --------
@@ -22,9 +22,9 @@ Features
 Quick Links
 -----------
 
-* **GitHub**: https://github.com/wizofe/gale
-* **Documentation**: https://gale.readthedocs.io
-* **Issue Tracker**: https://github.com/wizofe/gale/issues
+* **GitHub**: https://github.com/wizofe/neurogale
+* **Documentation**: https://neurogale.readthedocs.io
+* **Issue Tracker**: https://github.com/wizofe/neurogale/issues
 
 Getting Started
 ---------------
@@ -35,10 +35,10 @@ Getting Started
    pip install -e .
 
    # Run analysis
-   gale --n_voxels 1000 --n_timepoints 200 --cpu-only
+   neurogale --n_voxels 1000 --n_timepoints 200 --cpu-only
 
    # Check GPU availability
-   gale --show-gpu-info
+   neurogale --show-gpu-info
 
 For detailed installation instructions, see :doc:`installation`.
 
@@ -69,7 +69,7 @@ From synthetic fMRI benchmarks (timings in milliseconds):
 
    * - Voxels
      - NumPy (CPU)
-     - GALE (GPU)
+     - NEUROGALE (GPU)
      - Speedup
      - vs AFNI
    * - 10,000
@@ -91,26 +91,26 @@ From synthetic fMRI benchmarks (timings in milliseconds):
 Citation
 --------
 
-If you use **GALE** in your research, please cite:
+If you use **NEUROGALE** in your research, please cite:
 
 .. code-block:: bibtex
 
-   @software{gale2025,
+   @software{neurogale2025,
      author = {Valasakis, Ioannis},
-     title = {GALE: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
+     title = {NEUROGALE: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
      year = {2025},
-     url = {https://github.com/wizofe/gale},
+     url = {https://github.com/wizofe/neurogale},
      version = {0.2.0},
-     note = {Documentation available at https://gale.readthedocs.io}
+     note = {Documentation available at https://neurogale.readthedocs.io}
    }
 
 For LaTeX documents:
 
 .. code-block:: latex
 
-   \textsc{gale} (GPU-Accelerated Large-scale Exploration) is available at
-   \url{https://github.com/wizofe/gale}. Documentation, including installation
-   instructions and usage examples, is available at \url{https://gale.readthedocs.io}.
+   \textsc{neurogale} (GPU-Accelerated Large-scale Exploration) is available at
+   \url{https://github.com/wizofe/neurogale}. Documentation, including installation
+   instructions and usage examples, is available at \url{https://neurogale.readthedocs.io}.
 
 Indices and Tables
 ==================

@@ -1,7 +1,7 @@
 Installation
 ============
 
-**gale** (GPU-Accelerated Large-scale Exploration) can be installed in multiple ways depending on your needs and environment.
+**neurogale** (GPU-Accelerated Large-scale Exploration) can be installed in multiple ways depending on your needs and environment.
 
 Requirements
 ------------
@@ -41,8 +41,8 @@ Using uv (Recommended)
 .. code-block:: bash
 
     # Clone the repository
-    git clone https://github.com/wizofe/gale.git
-    cd gale
+    git clone https://github.com/wizofe/neurogale.git
+    cd neurogale
 
     # Create virtual environment
     uv venv .venv
@@ -63,8 +63,8 @@ Using pip
 .. code-block:: bash
 
     # Clone the repository
-    git clone https://github.com/wizofe/gale.git
-    cd gale
+    git clone https://github.com/wizofe/neurogale.git
+    cd neurogale
 
     # Create virtual environment
     python -m venv venv
@@ -78,7 +78,7 @@ From PyPI (Coming Soon)
 
 .. code-block:: bash
 
-    pip install gale
+    pip install neurogale
 
 Installation Options
 --------------------
@@ -92,7 +92,7 @@ For systems without NVIDIA GPUs (e.g., macOS, AMD GPUs):
 
     pip install -e .
 
-This installs all core dependencies except CuPy. **gale** will automatically fall back to CPU computation.
+This installs all core dependencies except CuPy. **neurogale** will automatically fall back to CPU computation.
 
 GPU-Enabled Installation
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,10 +172,10 @@ Command-Line Verification
 .. code-block:: bash
 
     # Show GPU information
-    gale --show-gpu-info
+    neurogale --show-gpu-info
 
     # Run small test
-    gale --n_voxels 100 --n_timepoints 50 --cpu-only --seed 42
+    neurogale --n_voxels 100 --n_timepoints 50 --cpu-only --seed 42
 
 Troubleshooting
 ---------------
@@ -203,7 +203,7 @@ CuPy Installation Issues
 macOS Installation
 ~~~~~~~~~~~~~~~~~~
 
-**Note**: NVIDIA CUDA is not available on macOS. **gale** will automatically use CPU mode.
+**Note**: NVIDIA CUDA is not available on macOS. **neurogale** will automatically use CPU mode.
 
 .. code-block:: bash
 
@@ -218,18 +218,18 @@ Pre-built Docker Image
 
 .. code-block:: bash
 
-    docker pull wizofe/gale:latest
-    docker run --gpus all -it wizofe/gale:latest
+    docker pull wizofe/neurogale:latest
+    docker run --gpus all -it wizofe/neurogale:latest
 
 Build from Source
 ~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
-    git clone https://github.com/wizofe/gale.git
-    cd gale
-    docker build -t gale:local .
-    docker run --gpus all -it gale:local
+    git clone https://github.com/wizofe/neurogale.git
+    cd neurogale
+    docker build -t neurogale:local .
+    docker run --gpus all -it neurogale:local
 
 Conda/Mamba Installation
 -------------------------
@@ -238,14 +238,14 @@ Using conda-forge:
 
 .. code-block:: bash
 
-    conda create -n gale python=3.10
-    conda activate gale
+    conda create -n neurogale python=3.10
+    conda activate neurogale
     conda install numpy nibabel dask matplotlib seaborn pandas pytest
 
     # For GPU support
     conda install -c conda-forge cupy
 
-    # Install gale
+    # Install neurogale
     pip install -e .
 
 Platform-Specific Notes
@@ -276,7 +276,7 @@ GPU support requires NVIDIA drivers and CUDA toolkit:
 macOS
 ~~~~~
 
-GPU acceleration not available (no CUDA support). **gale** works in CPU mode:
+GPU acceleration not available (no CUDA support). **neurogale** works in CPU mode:
 
 .. code-block:: bash
 

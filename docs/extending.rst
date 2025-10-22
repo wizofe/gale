@@ -1,10 +1,10 @@
-Extending gale: Adding New Graph Metrics
-=========================================
+Extending neurogale: Adding New Graph Metrics
+=============================================
 
-**gale** is designed with modularity in mind, making it easy to extend with new graph theory metrics beyond degree centrality. This guide demonstrates how to add new metrics while maintaining compatibility with the existing CPU/GPU architecture.
+**neurogale** is designed with modularity in mind, making it easy to extend with new graph theory metrics beyond degree centrality. This guide demonstrates how to add new metrics while maintaining compatibility with the existing CPU/GPU architecture.
 
-Overview of gale's Modular Design
-----------------------------------
+Overview of neurogale's Modular Design
+---------------------------------------
 
 The framework is organized into four main modules:
 
@@ -367,7 +367,7 @@ GPU Optimization Tips
 Contributing Your Metric
 -------------------------
 
-To contribute a new metric to **gale**:
+To contribute a new metric to **neurogale**:
 
 1. Fork the repository
 2. Create a feature branch (``git checkout -b feature/betweenness-centrality``)
