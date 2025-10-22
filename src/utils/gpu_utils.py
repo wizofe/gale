@@ -12,6 +12,7 @@ from typing import Tuple, Optional
 try:
     import cupy as cp
     CUPY_AVAILABLE = True
+    _CUPY_IMPORT_ERROR = None
 except (ImportError, Exception) as e:
     CUPY_AVAILABLE = False
     _CUPY_IMPORT_ERROR = str(e)
