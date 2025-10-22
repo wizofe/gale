@@ -1,0 +1,9 @@
+numpy
+cupy-cuda12x        # Choose the version that matches your CUDA version (e.g. cupy-cuda12x)
+dask
+nibabel
+matplotlib
+seaborn
+pandas
+pytest
+sphinx
