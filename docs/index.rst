@@ -1,12 +1,12 @@
-gale: GPU-Accelerated Large-scale Exploration
+GALE: GPU-Accelerated Large-scale Exploration
 ==============================================
 
-Welcome to the **gale** framework documentation.
+Welcome to the **GALE** framework documentation.
 
-**gale** (**G**\PU-**A**\ccelerated **L**\arge-scale **E**\xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing.
+**GALE** (**G**\PU-**A**\ccelerated **L**\arge-scale **E**\xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing.
 
 .. note::
-   **Performance**: gale achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelized) across all tested voxel sizes.
+   **Performance**: GALE achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelized) across all tested voxel sizes.
 
 Features
 --------
@@ -69,7 +69,7 @@ From synthetic fMRI benchmarks (timings in milliseconds):
 
    * - Voxels
      - NumPy (CPU)
-     - gale (GPU)
+     - GALE (GPU)
      - Speedup
      - vs AFNI
    * - 10,000
@@ -91,13 +91,13 @@ From synthetic fMRI benchmarks (timings in milliseconds):
 Citation
 --------
 
-If you use **gale** in your research, please cite:
+If you use **GALE** in your research, please cite:
 
 .. code-block:: bibtex
 
    @software{gale2025,
      author = {Valasakis, Ioannis},
-     title = {gale: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
+     title = {GALE: GPU-Accelerated Large-scale Exploration for Brain Connectivity Analysis},
      year = {2025},
      url = {https://github.com/wizofe/gale},
      version = {0.2.0},
