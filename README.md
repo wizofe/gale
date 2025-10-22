@@ -9,7 +9,7 @@ GALE: GPU-Accelerated Large-scale Exploration
 
 **gale** (**G**PU-**A**ccelerated **L**arge-scale **E**xploration) is a high-performance Python framework for computing voxelwise brain connectivity metrics using GPU-accelerated computing. Designed for neuroscience researchers working with fMRI data, gale provides efficient tools for calculating graph theory metrics such as degree centrality across whole-brain voxel networks.
 
-> **Performance**: gale achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelized) across all tested voxel sizes.
+> **Performance**: gale achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelised) across all tested voxel sizes.
 
 ## Key Features
 
@@ -88,7 +88,7 @@ from src.connectivity.degree_centrality import threshold_matrix_cpu, degree_cent
 data = np.random.randn(1000, 200)
 
 # Compute degree centrality pipeline
-data_std = standardise_cpu(data)              # Z-score normalization
+data_std = standardise_cpu(data)              # Z-score normalisation
 corr_matrix = compute_correlation_cpu(data_std)  # Pearson correlation
 corr_thresh = threshold_matrix_cpu(corr_matrix, threshold=0.2)  # Threshold weak connections
 degree = degree_centrality_cpu(corr_thresh)   # Weighted degree centrality
@@ -136,7 +136,7 @@ data_2d = data_4d.reshape(n_voxels, n_timepoints)
 from src.experiments.run_experiments import compute_cpu
 degree = compute_cpu(data_2d, threshold=0.2)
 
-# Reshape back to 3D for visualization
+# Reshape back to 3D for visualisation
 degree_3d = degree.reshape(data_4d.shape[:3])
 ```
 
@@ -144,7 +144,7 @@ degree_3d = degree.reshape(data_4d.shape[:3])
 
 The project includes a comprehensive test suite with 74 tests covering:
 
-- **Standardization** (22 tests): Z-score normalization, edge cases, mathematical properties
+- **Standardisation** (22 tests): Z-score normalisation, edge cases, mathematical properties
 - **Correlation** (23 tests): Pearson correlation, symmetry, positive semidefiniteness
 - **Degree Centrality** (26 tests): Graph metrics, thresholding, weighted networks
 - **GPU Utilities** (16 tests): GPU detection, graceful fallback, cross-platform compatibility
@@ -178,7 +178,7 @@ On **MacBook Pro 2014** (CPU-only, no CUDA):
 gale/
 ├── src/
 │   ├── data/               # Data I/O (NIfTI loading)
-│   ├── preprocessing/      # Standardization (z-score)
+│   ├── preprocessing/      # Standardisation (z-score)
 │   ├── gpu_engine/         # GPU-accelerated correlation
 │   ├── connectivity/       # Graph theory metrics (degree centrality)
 │   ├── utils/              # GPU detection, timing utilities
@@ -192,7 +192,7 @@ gale/
 
 **gale** computes voxelwise degree centrality using the following pipeline:
 
-1. **Standardization**: Z-score normalize each voxel timeseries
+1. **Standardisation**: Z-score normalise each voxel timeseries
    ```
    z = (x - μ) / σ
    ```
@@ -214,7 +214,7 @@ gale/
 
 ## Performance
 
-**gale** achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelized) across all tested voxel sizes. Below are computational performance results on synthetic augmented datasets (timings in milliseconds):
+**gale** achieves speedups exceeding **100×** over NumPy (single-core) and **50×** over AFNI (64-core parallelised) across all tested voxel sizes. Below are computational performance results on synthetic augmented datasets (timings in milliseconds):
 
 | Voxels  | CPU (NumPy) | gale (GPU) | AFNI (64-core) | Speedup vs NumPy | Speedup vs AFNI |
 |---------|-------------|------------|----------------|------------------|-----------------|
