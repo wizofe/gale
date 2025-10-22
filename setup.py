@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='gale',  # Renamed from DRAGON
+    name='gale',  # GPU-Accelerated Large-scale Exploration
     version='0.2.0',  # Bumped version for major improvements
     author='Ioannis Valasakis',
     author_email='code@wizofe.uk',
-    description='GPU-accelerated voxelwise brain connectivity analysis framework',
+    description='gale: GPU-Accelerated Large-scale Exploration for brain connectivity analysis',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     url='https://github.com/wizofe/gale',
