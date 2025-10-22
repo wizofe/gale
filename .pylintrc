@@ -1,0 +1,120 @@
+[MAIN]
+# Specify a score threshold to be exceeded before program exits with error
+fail-under=8.0
+
+# Files or directories to be skipped
+ignore=CVS,.git,__pycache__,.venv,venv,build,dist
+
+# Use multiple processes to speed up Pylint
+jobs=1
+
+[MESSAGES CONTROL]
+# Disable specific pylint messages that are not relevant or too strict for this project
+disable=
+    # Documentation
+    missing-module-docstring,  # docs/conf.py and other config files don't need docstrings
+    missing-class-docstring,
+
+    # Import errors (dependencies may not be installed in CI)
+    import-error,
+
+    # Naming conventions that conflict with Sphinx/setuptools conventions
+    invalid-name,  # Sphinx conf.py uses lowercase names by convention
+    redefined-builtin,  # Sphinx conf.py uses 'copyright' which is standard
+
+    # Code style preferences
+    line-too-long,  # We'll handle this with black/flake8
+    superfluous-parens,
+    consider-using-with,
+    unspecified-encoding,
+
+    # Refactoring suggestions (not errors)
+    no-else-return,
+    too-many-statements,
+
+    # Import order (handled by isort/black)
+    wrong-import-order,
+    ungrouped-imports,
+    import-outside-toplevel,  # Needed for optional dependencies
+
+    # Variable usage (sometimes intentional)
+    unused-variable,
+    unused-argument,
+    unused-import,
+
+    # Exception handling (sometimes we need broad catches)
+    broad-exception-caught,
+
+    # Name redefining (common in test fixtures)
+    redefined-outer-name,
+    reimported,
+
+    # Code duplication (acceptable for test boilerplate)
+    duplicate-code,
+
+    # F-strings without interpolation (sometimes clearer for consistency)
+    f-string-without-interpolation,
+
+    # Variables before assignment (false positives with try/except imports)
+    used-before-assignment,
+    possibly-used-before-assignment,
+    attribute-defined-outside-init,
+
+    # Whitespace
+    trailing-whitespace
+
+[FORMAT]
+# Maximum number of characters on a single line
+max-line-length=100
+
+[DESIGN]
+# Maximum number of arguments for function / method
+max-args=10
+
+# Maximum number of attributes for a class
+max-attributes=15
+
+# Maximum number of boolean expressions in a if statement
+max-bool-expr=5
+
+# Maximum number of branch for function / method body
+max-branches=15
+
+# Maximum number of locals for function / method body
+max-locals=20
+
+# Maximum number of parents for a class
+max-parents=7
+
+# Maximum number of public methods for a class
+max-public-methods=25
+
+# Maximum number of return / yield for function / method body
+max-returns=10
+
+# Maximum number of statements in function / method body
+max-statements=60
+
+# Minimum number of public methods for a class
+min-public-methods=0
+
+[SIMILARITIES]
+# Minimum lines number of a similarity.
+min-similarity-lines=20
+
+# Ignore comments when computing similarities.
+ignore-comments=yes
+
+# Ignore docstrings when computing similarities.
+ignore-docstrings=yes
+
+# Ignore imports when computing similarities.
+ignore-imports=yes
+
+[VARIABLES]
+# Tells whether we should check for unused import in __init__ files.
+init-import=no
+
+[EXCEPTIONS]
+# Exceptions that will emit a warning when being caught
+overgeneral-exceptions=builtins.BaseException,builtins.Exception
