@@ -1,5 +1,5 @@
 """
-DRAGON Framework Experimental Runner.
+gale Framework Experimental Runner.
 
 This module provides the main entry point for running brain connectivity
 analysis experiments with CPU/GPU comparison and benchmarking.
@@ -166,9 +166,9 @@ def run_comparison(data: np.ndarray,
 
 
 def main():
-    """Main entry point for DRAGON experiments."""
+    """Main entry point for gale experiments."""
     parser = argparse.ArgumentParser(
-        description="DRAGON: GPU-accelerated brain connectivity analysis",
+        description="gale: GPU-accelerated brain connectivity analysis",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument('--data_path', type=str, default=None,
@@ -205,7 +205,7 @@ def main():
 
     # Display configuration
     print("=" * 60)
-    print("DRAGON Framework - Brain Connectivity Analysis")
+    print("gale - GPU-Accelerated Brain Connectivity Analysis")
     print("=" * 60)
 
     # Show GPU status
